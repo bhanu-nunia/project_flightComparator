@@ -18,14 +18,18 @@ async function getFlightNumber(url, idx) {
   return flightNumber;
 }
 
-const url =
-  "https://flights.booking.com/flights/DEL-PNQ?adults=1&aid=304142&cabinClass=ECONOMY&children=&depart=2022-04-30&from=DEL&fromCountry=IN&fromLocationName=Delhi+International+Airport&label=gen173nr-1DCAEoggI46AdIM1gEaGyIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AtLchpIGwAIB0gIkNjBiOThlMjYtM2ZmZS00NDQ2LTg4ZDgtMzIyYTk0ODRjOGI22AIE4AIB&sort=BEST&to=PNQ&toCountry=IN&toLocationName=Pune+International+Airport&type=ONEWAY";
+module.exports = getFlightNumber;
 
-(async () => {
-  const flightNumbers = [];
-  for (let i = 0; i < 2; i++) {
-    const num = await getFlightNumber(url, i);
-    flightNumbers.push(num);
-  }
-  console.log(flightNumbers);
-})();
+
+
+// const url =
+// "https://flights.booking.com/flights/DEL-PNQ?adults=1&aid=304142&cabinClass=ECONOMY&children=&depart=2022-04-30&from=DEL&fromCountry=IN&fromLocationName=Delhi+International+Airport&label=gen173nr-1DCAEoggI46AdIM1gEaGyIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AtLchpIGwAIB0gIkNjBiOThlMjYtM2ZmZS00NDQ2LTg4ZDgtMzIyYTk0ODRjOGI22AIE4AIB&sort=BEST&to=PNQ&toCountry=IN&toLocationName=Pune+International+Airport&type=ONEWAY";
+
+// (async () => {
+//   const flightNumbers = [];
+//   for (let i = 0; i < 1; i++) {
+//     const num = await getFlightNumber(url, i);
+//     flightNumbers.push(num);
+//   }
+//   console.log(flightNumbers);
+// })();

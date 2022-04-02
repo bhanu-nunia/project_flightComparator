@@ -1,0 +1,20 @@
+{
+    "cheapestFlight": {
+        "flightNumber": "AI851",
+        "flightID": 2,
+        "name": "Air India",
+        "price": "5852.08",
+        "departureTime": "4:55 AM",
+        "arrivalTime": "7:05 AM",
+        "duration": "2h 10m"
+    },
+    "fastestFlight": {
+        "flightNumber": "6E643",
+        "flightID": 0,
+        "name": "IndiGo",
+        "price": "6168.27",
+        "departureTime": "4:55 AM",
+        "arrivalTime": "6:55 AM",
+        "duration": "2h 00m"
+    }
+}

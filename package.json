@@ -1,5 +1,23 @@
 {
+  "name": "airticketscomparator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhanu-nunia/project_flightComparator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhanu-nunia/project_flightComparator/issues"
+  },
+  "homepage": "https://github.com/bhanu-nunia/project_flightComparator#readme",
   "dependencies": {
-    "puppeteer": "^13.5.1"
+    "puppeteer": "^13.5.2"
   }
 }
