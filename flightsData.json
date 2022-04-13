@@ -1,1 +1,137 @@
-[{"flightID":0,"name":"IndiGo","price":"6168.27","departureTime":"4:55 AM","arrivalTime":"6:55 AM","duration":"2h 00m","durationInMinutes":120},{"flightID":1,"name":"IndiGo","price":"6168.27","departureTime":"11:20 PM","arrivalTime":"1:20 AM","duration":"2h 00m","durationInMinutes":120},{"flightID":2,"name":"Air India","price":"5852.08","departureTime":"4:55 AM","arrivalTime":"7:05 AM","duration":"2h 10m","durationInMinutes":130},{"flightID":3,"name":"IndiGo","price":"6168.27","departureTime":"7:50 AM","arrivalTime":"9:55 AM","duration":"2h 05m","durationInMinutes":125},{"flightID":4,"name":"IndiGo","price":"6382.37","departureTime":"5:55 PM","arrivalTime":"8:05 PM","duration":"2h 10m","durationInMinutes":130},{"flightID":5,"name":"IndiGo","price":"6917.66","departureTime":"9:05 PM","arrivalTime":"11:05 PM","duration":"2h 00m","durationInMinutes":120},{"flightID":6,"name":"IndiGo","price":"6168.27","departureTime":"2:00 AM","arrivalTime":"4:15 AM","duration":"2h 15m","durationInMinutes":135},{"flightID":7,"name":"Vistara","price":"6586.00","departureTime":"8:00 AM","arrivalTime":"10:10 AM","duration":"2h 10m","durationInMinutes":130},{"flightID":8,"name":"Vistara","price":"6586.00","departureTime":"8:45 PM","arrivalTime":"11:00 PM","duration":"2h 15m","durationInMinutes":135},{"flightID":9,"name":"Vistara","price":"7335.00","departureTime":"2:15 PM","arrivalTime":"4:20 PM","duration":"2h 05m","durationInMinutes":125},{"flightID":10,"name":"Vistara","price":"7335.00","departureTime":"5:35 PM","arrivalTime":"7:45 PM","duration":"2h 10m","durationInMinutes":130},{"flightID":11,"name":"Air India","price":"8228.35","departureTime":"4:10 PM","arrivalTime":"6:10 PM","duration":"2h 00m","durationInMinutes":120},{"flightID":12,"name":"IndiGo","price":"9542.17","departureTime":"12:15 AM","arrivalTime":"4:25 AM","duration":"4h 10m","durationInMinutes":250},{"flightID":13,"name":"IndiGo","price":"9542.17","departureTime":"5:20 PM","arrivalTime":"10:05 PM","duration":"4h 45m","durationInMinutes":285},{"flightID":14,"name":"Hahn Air Systems, operated by SpiceJet","price":"18542.54","departureTime":"5:05 PM","arrivalTime":"7:25 PM","duration":"2h 20m","durationInMinutes":140}]
+[
+  {
+    "flightID": 0,
+    "name": "IndiGo",
+    "price": "6168.27",
+    "departureTime": "4:55 AM",
+    "arrivalTime": "6:55 AM",
+    "duration": "2h 00m",
+    "durationInMinutes": 120
+  },
+  {
+    "flightID": 1,
+    "name": "IndiGo",
+    "price": "6168.27",
+    "departureTime": "11:20 PM",
+    "arrivalTime": "1:20 AM",
+    "duration": "2h 00m",
+    "durationInMinutes": 120
+  },
+  {
+    "flightID": 2,
+    "name": "Air India",
+    "price": "5852.08",
+    "departureTime": "4:55 AM",
+    "arrivalTime": "7:05 AM",
+    "duration": "2h 10m",
+    "durationInMinutes": 130
+  },
+  {
+    "flightID": 3,
+    "name": "IndiGo",
+    "price": "6168.27",
+    "departureTime": "7:50 AM",
+    "arrivalTime": "9:55 AM",
+    "duration": "2h 05m",
+    "durationInMinutes": 125
+  },
+  {
+    "flightID": 4,
+    "name": "IndiGo",
+    "price": "6382.37",
+    "departureTime": "5:55 PM",
+    "arrivalTime": "8:05 PM",
+    "duration": "2h 10m",
+    "durationInMinutes": 130
+  },
+  {
+    "flightID": 5,
+    "name": "IndiGo",
+    "price": "6917.66",
+    "departureTime": "9:05 PM",
+    "arrivalTime": "11:05 PM",
+    "duration": "2h 00m",
+    "durationInMinutes": 120
+  },
+  {
+    "flightID": 6,
+    "name": "IndiGo",
+    "price": "6168.27",
+    "departureTime": "2:00 AM",
+    "arrivalTime": "4:15 AM",
+    "duration": "2h 15m",
+    "durationInMinutes": 135
+  },
+  {
+    "flightID": 7,
+    "name": "Vistara",
+    "price": "6586.00",
+    "departureTime": "8:00 AM",
+    "arrivalTime": "10:10 AM",
+    "duration": "2h 10m",
+    "durationInMinutes": 130
+  },
+  {
+    "flightID": 8,
+    "name": "Vistara",
+    "price": "6586.00",
+    "departureTime": "8:45 PM",
+    "arrivalTime": "11:00 PM",
+    "duration": "2h 15m",
+    "durationInMinutes": 135
+  },
+  {
+    "flightID": 9,
+    "name": "Vistara",
+    "price": "7335.00",
+    "departureTime": "2:15 PM",
+    "arrivalTime": "4:20 PM",
+    "duration": "2h 05m",
+    "durationInMinutes": 125
+  },
+  {
+    "flightID": 10,
+    "name": "Vistara",
+    "price": "7335.00",
+    "departureTime": "5:35 PM",
+    "arrivalTime": "7:45 PM",
+    "duration": "2h 10m",
+    "durationInMinutes": 130
+  },
+  {
+    "flightID": 11,
+    "name": "Air India",
+    "price": "8228.35",
+    "departureTime": "4:10 PM",
+    "arrivalTime": "6:10 PM",
+    "duration": "2h 00m",
+    "durationInMinutes": 120
+  },
+  {
+    "flightID": 12,
+    "name": "IndiGo",
+    "price": "9542.17",
+    "departureTime": "12:15 AM",
+    "arrivalTime": "4:25 AM",
+    "duration": "4h 10m",
+    "durationInMinutes": 250
+  },
+  {
+    "flightID": 13,
+    "name": "IndiGo",
+    "price": "9542.17",
+    "departureTime": "5:20 PM",
+    "arrivalTime": "10:05 PM",
+    "duration": "4h 45m",
+    "durationInMinutes": 285
+  },
+  {
+    "flightID": 14,
+    "name": "Hahn Air Systems, operated by SpiceJet",
+    "price": "18542.54",
+    "departureTime": "5:05 PM",
+    "arrivalTime": "7:25 PM",
+    "duration": "2h 20m",
+    "durationInMinutes": 140
+  }
+]
