@@ -1,0 +1,137 @@
+[
+    {
+        "flightID": 0,
+        "name": "Air India",
+        "price": "47318.19",
+        "departureTime": "8:35 PM",
+        "arrivalTime": "10:45 PM",
+        "duration": "3h 40m",
+        "durationInMinutes": 220
+    },
+    {
+        "flightID": 1,
+        "name": "Air India",
+        "price": "52863.03",
+        "departureTime": "4:50 PM",
+        "arrivalTime": "6:55 PM",
+        "duration": "3h 35m",
+        "durationInMinutes": 215
+    },
+    {
+        "flightID": 2,
+        "name": "Air India",
+        "price": "52863.03",
+        "departureTime": "11:35 AM",
+        "arrivalTime": "1:45 PM",
+        "duration": "3h 40m",
+        "durationInMinutes": 220
+    },
+    {
+        "flightID": 3,
+        "name": "Emirates Airline",
+        "price": "71252.75",
+        "departureTime": "4:15 PM",
+        "arrivalTime": "6:10 PM",
+        "duration": "3h 25m",
+        "durationInMinutes": 205
+    },
+    {
+        "flightID": 4,
+        "name": "Emirates Airline",
+        "price": "71252.75",
+        "departureTime": "9:50 PM",
+        "arrivalTime": "11:55 PM",
+        "duration": "3h 35m",
+        "durationInMinutes": 215
+    },
+    {
+        "flightID": 5,
+        "name": "Air India",
+        "price": "54202.02",
+        "departureTime": "9:15 PM",
+        "arrivalTime": "2:40 AM",
+        "duration": "6h 55m",
+        "durationInMinutes": 415
+    },
+    {
+        "flightID": 6,
+        "name": "Gulf Air",
+        "price": "46334.95",
+        "departureTime": "4:55 AM",
+        "arrivalTime": "12:05 PM",
+        "duration": "8h 40m",
+        "durationInMinutes": 520
+    },
+    {
+        "flightID": 7,
+        "name": "Emirates Airline",
+        "price": "110359.93",
+        "departureTime": "11:00 AM",
+        "arrivalTime": "1:00 PM",
+        "duration": "3h 30m",
+        "durationInMinutes": 210
+    },
+    {
+        "flightID": 8,
+        "name": "Air India",
+        "price": "42097.08",
+        "departureTime": "5:45 AM",
+        "arrivalTime": "1:45 PM",
+        "duration": "9h 30m",
+        "durationInMinutes": 570
+    },
+    {
+        "flightID": 9,
+        "name": "Air India",
+        "price": "54202.02",
+        "departureTime": "3:05 PM",
+        "arrivalTime": "9:55 PM",
+        "duration": "8h 20m",
+        "durationInMinutes": 500
+    },
+    {
+        "flightID": 10,
+        "name": "Saudi Arabian Airlines",
+        "price": "43271.30",
+        "departureTime": "8:05 PM",
+        "arrivalTime": "4:35 AM",
+        "duration": "10h 00m",
+        "durationInMinutes": 600
+    },
+    {
+        "flightID": 11,
+        "name": "Oman Air",
+        "price": "75260.04",
+        "departureTime": "4:00 PM",
+        "arrivalTime": "9:25 PM",
+        "duration": "6h 55m",
+        "durationInMinutes": 415
+    },
+    {
+        "flightID": 12,
+        "name": "Vistara",
+        "price": "71509.00",
+        "departureTime": "11:40 AM",
+        "arrivalTime": "6:15 PM",
+        "duration": "8h 05m",
+        "durationInMinutes": 485
+    },
+    {
+        "flightID": 13,
+        "name": "Vistara",
+        "price": "54754.00",
+        "departureTime": "9:30 AM",
+        "arrivalTime": "6:15 PM",
+        "duration": "10h 15m",
+        "durationInMinutes": 615
+    },
+    {
+        "flightID": 14,
+        "name": "Vistara",
+        "price": "61984.00",
+        "departureTime": "10:20 AM",
+        "arrivalTime": "6:15 PM",
+        "duration": "9h 25m",
+        "durationInMinutes": 565
+    }
+]

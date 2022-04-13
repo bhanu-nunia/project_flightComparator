@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/bhanu-nunia/project_flightComparator#readme",
   "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.10",
     "puppeteer": "^13.5.2"
   }
 }

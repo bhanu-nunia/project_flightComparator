@@ -3,11 +3,12 @@ const fs = require("fs");
 
 const getFlightNumber = require("./getFlightNumber");
 
-// (./../march 11/ques-3)
+// (./../march 11/ques-3)   (../ -> to go back from a folder)
 
 (async () => {
-  flightUrl =
-    "https://flights.booking.com/flights/DEL-PNQ/?type=ONEWAY&adults=1&cabinClass=ECONOMY&children=&from=DEL&to=PNQ&fromCountry=IN&toCountry=IN&fromLocationName=Delhi+International+Airport&toLocationName=Pune+International+Airport&depart=2022-04-30&sort=BEST&aid=304142&label=gen173nr-1DCAEoggI46AdIM1gEaGyIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AtLchpIGwAIB0gIkNjBiOThlMjYtM2ZmZS00NDQ2LTg4ZDgtMzIyYTk0ODRjOGI22AIE4AIB";
+
+  flightUrl = "https://flights.booking.com/flights/DEL-DXB/?type=ONEWAY&adults=1&cabinClass=BUSINESS&children=&from=DEL&to=DXB&fromCountry=IN&toCountry=AE&fromLocationName=Delhi+International+Airport&toLocationName=Dubai&depart=2022-04-30&sort=BEST&aid=304142&label=gen173nr-1DCAEoggI46AdIM1gEaGyIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AtLchpIGwAIB0gIkNjBiOThlMjYtM2ZmZS00NDQ2LTg4ZDgtMzIyYTk0ODRjOGI22AIE4AIB"
+
 
   let browser = await puppeteer.launch({ headless: false });
   let page = await browser.newPage();
@@ -29,19 +30,10 @@ const getFlightNumber = require("./getFlightNumber");
       if (flight.querySelector(".css-1dimx8f")) {
         name = flight.querySelector(".css-1dimx8f").innerText;
       }
-      if (
-        flight.querySelector('[data-test-id="flight_card_price_main_price"]')
-      ) {
-        price = flight
-          .querySelector('[data-test-id="flight_card_price_main_price"]')
-          .innerText.replace("INR", "")
-          .replace(",", "");
+      if (flight.querySelector('[data-test-id="flight_card_price_main_price"]')) {
+        price = flight.querySelector('[data-test-id="flight_card_price_main_price"]').innerText.replace("INR", "").replace(",", "");
       }
-      if (
-        flight.querySelectorAll(
-          ".Text-module__root--variant-strong_1___2UxW5"
-        )[0]
-      ) {
+      if (flight.querySelectorAll(".Text-module__root--variant-strong_1___2UxW5")[0]) {
         departureTime = flight.querySelectorAll(
           ".Text-module__root--variant-strong_1___2UxW5"
         )[0].innerText;
@@ -86,27 +78,31 @@ const getFlightNumber = require("./getFlightNumber");
     return flightInfo;
   });
 
-  fs.writeFileSync("flightsData.json",JSON.stringify(flightsData))
-
+  
+  fs.writeFileSync("flightsData.json", JSON.stringify(flightsData))
+  
   flightsData.sort(function (x, y) {
     return x.price - y.price;
   });
   let flightNumber = await getFlightNumber(flightUrl, flightsData[0].flightID);
   let cheapestFlight = { flightNumber, ...flightsData[0] };
   delete cheapestFlight.durationInMinutes;
-
+  
   flightsData.sort(function (x, y) {
     return x.durationInMinutes - y.durationInMinutes;
   });
   flightNumber = await getFlightNumber(flightUrl, flightsData[0].flightID);
   let fastestFlight = { flightNumber, ...flightsData[0] };
   delete fastestFlight.durationInMinutes;
+  
+  delete flightsData.durationInMinutes
+  console.table(flightsData);
 
-  let answer = {cheapestFlight,fastestFlight}
-
-  fs.writeFileSync("sortedData.json",JSON.stringify(answer))
-
-  // console.log(flightsData);
+  let answer = { cheapestFlight, fastestFlight }
+  fs.writeFileSync("sortedData.json", JSON.stringify(answer))
   console.log(answer);
+  
+
   await browser.close();
 })();
+
