@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>Flight Comparator</h3><br><br>
+        <label>ENTER URL</label>
+        <input type="text" id="url" value="https://flights.booking.com/flights/DEL-DXB/?type=ONEWAY&adults=1&cabinClass=BUSINESS&children=&from=DEL&to=DXB&fromCountry=IN&toCountry=AE&fromLocationName=Delhi+International+Airport&toLocationName=Dubai&depart=2022-04-30&sort=BEST&aid=304142&label=gen173nr-1DCAEoggI46AdIM1gEaGyIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AtLchpIGwAIB0gIkNjBiOThlMjYtM2ZmZS00NDQ2LTg4ZDgtMzIyYTk0ODRjOGI22AIE4AIB"><br><br>
+        <button class="btn">submit</button><br><br><br>
+
+        <button class="btnFetch">FetchData</button><br>
+
+        <div class="box2">
+                <pre id="cheapest"></pre>
+                <pre id="fastest"></pre>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+</body>
+<script src="./script.js"></script>
+</html>

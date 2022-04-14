@@ -1,13 +1,14 @@
 const puppeteer = require("puppeteer");
 const fs = require("fs");
+const path = require('path');
 
 const getFlightNumber = require("./getFlightNumber");
 
 // (./../march 11/ques-3)   (../ -> to go back from a folder)
 
-(async () => {
+module.exports = async function (flightUrl) {
 
-  flightUrl = "https://flights.booking.com/flights/DEL-DXB/?type=ONEWAY&adults=1&cabinClass=BUSINESS&children=&from=DEL&to=DXB&fromCountry=IN&toCountry=AE&fromLocationName=Delhi+International+Airport&toLocationName=Dubai&depart=2022-04-30&sort=BEST&aid=304142&label=gen173nr-1DCAEoggI46AdIM1gEaGyIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AtLchpIGwAIB0gIkNjBiOThlMjYtM2ZmZS00NDQ2LTg4ZDgtMzIyYTk0ODRjOGI22AIE4AIB"
+  // flightUrl = "https://flights.booking.com/flights/DEL-DXB/?type=ONEWAY&adults=1&cabinClass=BUSINESS&children=&from=DEL&to=DXB&fromCountry=IN&toCountry=AE&fromLocationName=Delhi+International+Airport&toLocationName=Dubai&depart=2022-04-30&sort=BEST&aid=304142&label=gen173nr-1DCAEoggI46AdIM1gEaGyIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AtLchpIGwAIB0gIkNjBiOThlMjYtM2ZmZS00NDQ2LTg4ZDgtMzIyYTk0ODRjOGI22AIE4AIB"
 
 
   let browser = await puppeteer.launch({ headless: false });
@@ -78,8 +79,15 @@ const getFlightNumber = require("./getFlightNumber");
     return flightInfo;
   });
 
-  
-  fs.writeFileSync("flightsData.json", JSON.stringify(flightsData))
+  if(!fs.existsSync('processedData')){
+    fs.mkdirSync('processedData')
+  }
+
+  let filePath1 = path.join(__dirname,'processedData',"flightsData.json")
+  let filePath2 = path.join(__dirname,'processedData',"sortedData.json")
+
+
+  fs.writeFileSync(filePath1, JSON.stringify(flightsData))
   
   flightsData.sort(function (x, y) {
     return x.price - y.price;
@@ -99,10 +107,10 @@ const getFlightNumber = require("./getFlightNumber");
   console.table(flightsData);
 
   let answer = { cheapestFlight, fastestFlight }
-  fs.writeFileSync("sortedData.json", JSON.stringify(answer))
+  fs.writeFileSync(filePath2, JSON.stringify(answer))
   console.log(answer);
   
 
   await browser.close();
-})();
+}
 

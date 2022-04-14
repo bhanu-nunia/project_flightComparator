@@ -2,8 +2,20 @@ const express = require("express");
 const mongoose = require("mongoose");
 const fs = require("fs/promises");
 const path = require('path');
+const mainCode = require('./main')
 
 const app = express();
+app.use(express.json())
+app.use(express.static('frontend'))
+
+
+
+
+
+
+
+
+
 
 const dbLink =
   "mongodb+srv://bhanu_nunia:7YEfNqg7eTL1g7HI@cluster0.r2adg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
@@ -28,33 +40,57 @@ const flightSchema = new mongoose.Schema({
 
 const flightModel = mongoose.model('flightModel',flightSchema)
 
+
+
+
+
+
+
+
+
+
+
+
 const flightRouter = express.Router();
 app.use('/',flightRouter)
 
-flightRouter.get('/flights',getFlights)
-flightRouter.post('/flights',postFlights)
+flightRouter.get('/',(req,res)=>{
+  res.sendFile('index.html')
+})
 
-async function getFlights(req,res){
+flightRouter.post('/scrap',async(req,res)=>{
+      
+      await mainCode(req.body.url)
+
+      res.json({
+        message: "done with scrapping"
+      })     
+})
+
+flightRouter.get('/flights',getFlightsFromDB)
+flightRouter.post('/flights',postFlightsInDB)
+
+async function getFlightsFromDB(req,res){
     const data = await flightModel.find()
     res.json({
-        message: "get is working" ,
+        message: "got data from DB successfully" ,
         data : data
     })
 }
 
-async function postFlights(req,res){
-    const filePath1 = path.join(__dirname,'data','sortedData.json')
+async function postFlightsInDB(req,res){
+    const filePath1 = path.join(__dirname,'processedData','sortedData.json')
     // console.log(filePath);
     let sortedData = await fs.readFile(filePath1, {encoding : "utf-8"})
     sortedData = JSON.parse(sortedData)
-    console.log(sortedData);
+    // console.log(sortedData);
     
 
-    const filePath2 = path.join(__dirname,'data','flightsData.json')
+    const filePath2 = path.join(__dirname,'processedData','flightsData.json')
     // console.log(filePath);
     let flightData = await fs.readFile(filePath2, {encoding : "utf-8"})
     flightData = JSON.parse(flightData)
-    console.log(flightData);
+    // console.log(flightData);
 
     await flightModel.deleteMany()
 
@@ -64,8 +100,10 @@ async function postFlights(req,res){
     
 
     res.json({
-        message: "post is working" 
+        message: "data uploaded in DB" 
     })
 }
 
-app.listen(3000);
+app.listen(4000,()=>{
+  console.log('server is alive at port 4000');
+});
